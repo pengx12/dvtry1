@@ -27,7 +27,7 @@ fetch(
       .active(true)
       .animate(true)
       .size(36)
-      .color("#4cfd47")
+      .color("category", ["#4cfd47", "#F6BD16", "#E86452"])
       .style({
         opacity: 1
       });
@@ -37,9 +37,7 @@ fetch(
         closeButton: false
       })
         .setLnglat(e.lngLat)
-        .setHTML(
-          `<span>${e.feature.name_en}\n\n ${e.feature.states_name_en}</span>`
-        );
+        .setHTML(`<span>${e.feature.name_en}\n\n ${e.feature.category}</span>`);
       scene.addPopup(popup);
     });
     scene.addLayer(pointLayer);
