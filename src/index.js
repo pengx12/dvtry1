@@ -10,9 +10,8 @@ const scene = new Scene({
     zoom: 1.5
   })
 });
-
 fetch(
-  "https://raw.githubusercontent.com/pengx12/sandboxtry/master/src/whc-sites-2019.csv"
+  "https://raw.githubusercontent.com/pengx12/dvtry1/master/src/whc-sites-2019.csv"
 )
   .then(res => res.text())
   .then(data => {
